@@ -1,0 +1,22 @@
+/* Estilos para la sección Nosotros */
+.nosotros-section.container {
+    padding: 20px;
+  }
+  
+  /* Estilo para el título "Nosotros" */
+ .nosotros-section.container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(0 0 0);
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el párrafo de texto */
+ .nosotros-section.container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(0 0 0);
+  }
+
+
+  

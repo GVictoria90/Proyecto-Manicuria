@@ -1,0 +1,20 @@
+/* Inicio.css */
+
+.home-section-container {
+    padding: 40px;
+}
+
+.home-section-container h1 {
+    font-size: 32px;
+    font-weight: 100;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-section-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+

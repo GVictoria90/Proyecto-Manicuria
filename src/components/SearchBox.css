@@ -1,0 +1,7 @@
+input.form-control {
+    height: 100% !important;
+}
+
+input.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(207, 147, 194, 0.5) !important;
+}

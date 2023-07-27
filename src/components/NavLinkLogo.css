@@ -1,0 +1,29 @@
+.nav-link-logo .rounded-circle {
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-link-logo:hover .rounded-circle {
+    transform: scale(1.025);
+  }
+  
+  .nav-link-logo:focus .rounded-circle {
+    /* Styles for when the button is in the active (clicked) state */
+    box-shadow: 0 0 0 0.2rem rgba(207, 147, 194, 0.5);
+  }
+  
+  @media (max-width: 991px) {
+    .nav-link-logo.no-w100 .rounded-circle {
+      
+    }
+    .nav-link-logo:not(.no-w100) .rounded-circle {
+      width: 100%;
+    }
+    .nav-link-logo:hover .rounded-circle {
+      transform: scale(1);
+    }
+  }
+  

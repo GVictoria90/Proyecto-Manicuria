@@ -1,0 +1,59 @@
+.iridescent-button {
+  padding: 8px 8px !important;
+  font-size: 1rem !important;
+  background-image: linear-gradient(
+    135deg,
+    #cf93c2,
+    #b3bcdf,
+    #d0eadb,
+    #acd4eb
+  ) !important;
+  border: none !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.2s ease-in-out;
+  animation-play-state: paused;
+  /* Add these lines to fix the sliding animation */
+  background-size: 300% 300%;
+  background-position: 0% 0%;
+}
+
+@keyframes slideColors {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+.iridescent-button:hover {
+  transform: scale(1.025);
+  animation: slideColors 5s infinite linear;
+}
+
+.iridescent-button:focus {
+  /* Styles for when the button is in the active (clicked) state */
+  box-shadow: 0 0 0 0.2rem rgba(207, 147, 194, 0.5);
+}
+
+@media (max-width: 991px) {
+  .iridescent-button.no-w100 {
+    
+  }
+  .iridescent-button:not(.no-w100) {
+    width: 100%;
+  }
+  .iridescent-button:hover {
+    transform: scale(1);
+  }
+}
