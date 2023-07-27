@@ -7,7 +7,7 @@ const Inicio = () => {
   return (
     <div className="home-section-container">
       <div className="row align-items-center">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6 text-50">
           <h1>Bienvenidos a Nail Art Studio</h1>
           <p>
             En nombre de VG Nails Art Studio, me destaco a resaltar la belleza natural de tus manos y uñas mientras te brindo una experiencia relajante y revitalizante.
