@@ -15,7 +15,7 @@ const ReadMore = ({ children }) => {
         {text}
       </div>
       <div className="text-center">
-          <Button onClick={toggleReadMore} className="btn btn-primary my-4">
+          <Button type={"button"} onClick={toggleReadMore} className="btn btn-primary my-4">
             {isReadMore ? "Leer mas" : " Mostrar menos"}
           </Button>
       </div>

@@ -1,0 +1,46 @@
+.row-with-icons {
+    justify-content: space-evenly;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.normal-card-image .card-image-wrapper {
+    overflow: hidden;
+}
+
+.card-with-icon{
+    background-color: transparent;
+    align-items: center;
+    max-width: 300px;
+     margin: auto;
+}
+
+.normal-image{
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover .normal-image{
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-with-icon:hover .img-with-icon{
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-with-icon:hover p:nth-child(1){
+    color: #402b7a;
+    transition: color 0.5s ease-in-out;
+}
+
+.card-with-icon p {
+    text-align: center;
+}
+
+.img-with-icon{
+    height: 64px;
+}
