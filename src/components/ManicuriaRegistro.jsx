@@ -1,25 +1,40 @@
 import React, { useState } from "react";
-import Header from "./Header";
+import Button from "./Button";
 
 function ManicuriaRegistro() {
   const urlBase = "https://64c08c6c0d8e251fd1122d27.mockapi.io/api/v1/reservas";
 
   const [nombreCliente, setNombreCliente] = useState("");
   const [servicio, setServicio] = useState("");
+  const [telefono, setTelefono] = useState("");
   const [fecha, setFecha] = useState("");
-  const [hora, setHora] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     const nuevoRegistro = {
-      NombreCliente: nombreCliente,
-      Servicio: servicio,
-      Fecha: fecha,
-      Hora: hora,
+      name: nombreCliente,
+      service: servicio,
+      phoneNumber: telefono,
+      dateTime: convertDate(fecha),
     };
 
     addOne(nuevoRegistro);
+  };
+
+  const convertDate = (date) => {
+    const dateObject = new Date(date);
+
+    const formattedDate = dateObject.toLocaleString("es-AR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "America/Buenos_Aires",
+    });
+
+    return formattedDate;
   };
 
   async function addOne(registro) {
@@ -57,6 +72,7 @@ function ManicuriaRegistro() {
               className="form-control"
               value={nombreCliente}
               onChange={(e) => setNombreCliente(e.target.value)}
+              required
             />
           </div>
           <div>
@@ -69,6 +85,20 @@ function ManicuriaRegistro() {
               className="form-control"
               value={servicio}
               onChange={(e) => setServicio(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="telefono" className="form-label">
+              Telefono de contacto:
+            </label>
+            <input
+              type="tel"
+              id="telefono"
+              className="form-control"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+              required
             />
           </div>
           <div>
@@ -76,29 +106,18 @@ function ManicuriaRegistro() {
               Fecha:
             </label>
             <input
-              type="date"
+              type="datetime-local"
               id="fecha"
               className="form-control"
               value={fecha}
               onChange={(e) => setFecha(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="hora" className="form-label">
-              Hora:
-            </label>
-            <input
-              type="time"
-              id="hora"
-              className="form-control"
-              value={hora}
-              onChange={(e) => setHora(e.target.value)}
+              required
             />
           </div>
           <div className="Boton text-center my-3">
-            <button type="submit" className="btn btn-primary">
+            <Button type={"submit"} className={""}>
               Guardar
-            </button>
+            </Button>
           </div>
         </form>
       </div>

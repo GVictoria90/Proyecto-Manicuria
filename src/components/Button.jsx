@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.css";
 
-const Button = ({ children, onClick, className }) => {
+const Button = ({ children, onClick, className, type }) => {
   const handleClick = () => {
     // Call the onClick function provided by the parent component
     // This way, the parent component can handle the click logic as needed
@@ -14,7 +14,7 @@ const Button = ({ children, onClick, className }) => {
   return (
     <button
       className={"iridescent-button " + className}
-      type="button"
+      type={type}
       onClick={handleClick}
     >
       {children}

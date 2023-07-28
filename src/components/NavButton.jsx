@@ -10,7 +10,7 @@ const NavButton = ({ route, children }) => {
 
 
   return (
-    <Button onClick={handleNavigation} className={""}>
+    <Button type={"button"} onClick={handleNavigation} className={""}>
       {children}
     </Button>
   );
